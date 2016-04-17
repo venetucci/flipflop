@@ -14,6 +14,7 @@
 		3B070A3D1CC2EB7A003F9E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B070A3B1CC2EB7A003F9E9B /* LaunchScreen.storyboard */; };
 		3B070A481CC2EB7A003F9E9B /* flipflopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B070A471CC2EB7A003F9E9B /* flipflopTests.swift */; };
 		3B070A551CC2EBCA003F9E9B /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B070A541CC2EBCA003F9E9B /* FlashcardViewController.swift */; };
+		EB65B9B57E88F0F3521D8A59 /* Pods_flipflop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		3B070A471CC2EB7A003F9E9B /* flipflopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flipflopTests.swift; sourceTree = "<group>"; };
 		3B070A491CC2EB7A003F9E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B070A541CC2EBCA003F9E9B /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlashcardViewController.swift; path = ../FlashcardViewController.swift; sourceTree = "<group>"; };
+		5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.release.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.release.xcconfig"; sourceTree = "<group>"; };
+		DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.debug.xcconfig"; sourceTree = "<group>"; };
+		EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flipflop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB65B9B57E88F0F3521D8A59 /* Pods_flipflop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015D64E3910797F9F7C42899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */,
+				5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3B070A261CC2EB7A003F9E9B = {
 			isa = PBXGroup;
 			children = (
 				3B070A311CC2EB7A003F9E9B /* flipflop */,
 				3B070A461CC2EB7A003F9E9B /* flipflopTests */,
 				3B070A301CC2EB7A003F9E9B /* Products */,
+				015D64E3910797F9F7C42899 /* Pods */,
+				6943A8F177328EC9049C479E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,14 @@
 			path = flipflopTests;
 			sourceTree = "<group>";
 		};
+		6943A8F177328EC9049C479E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B070A4C1CC2EB7A003F9E9B /* Build configuration list for PBXNativeTarget "flipflop" */;
 			buildPhases = (
+				808E512F101DF5F429000C0F /* Check Pods Manifest.lock */,
 				3B070A2B1CC2EB7A003F9E9B /* Sources */,
 				3B070A2C1CC2EB7A003F9E9B /* Frameworks */,
 				3B070A2D1CC2EB7A003F9E9B /* Resources */,
+				8ED02240AACD7A9FB4EAADE9 /* Embed Pods Frameworks */,
+				3F280CB1F2E03B2069FD794D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F280CB1F2E03B2069FD794D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflop/Pods-flipflop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		808E512F101DF5F429000C0F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8ED02240AACD7A9FB4EAADE9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflop/Pods-flipflop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B070A2B1CC2EB7A003F9E9B /* Sources */ = {
@@ -333,6 +408,7 @@
 		};
 		3B070A4D1CC2EB7A003F9E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = flipflop/Info.plist;
@@ -344,6 +420,7 @@
 		};
 		3B070A4E1CC2EB7A003F9E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = flipflop/Info.plist;
@@ -396,6 +473,7 @@
 				3B070A4E1CC2EB7A003F9E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B070A4F1CC2EB7A003F9E9B /* Build configuration list for PBXNativeTarget "flipflopTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +482,7 @@
 				3B070A511CC2EB7A003F9E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
