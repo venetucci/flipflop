@@ -17,6 +17,9 @@ class FlashcardViewController: UIViewController {
     var cardView: UIView!
     var front: UIView!
     var back: UIView!
+    var cardInitialCenter: CGPoint!
+    var showingSide: UIView!
+    var hiddenSide: UIView!
     
     let blue = UIColor(hexString: "#43DAF8")!
     let green = UIColor(hexString: "#7AEA7A")!
@@ -31,75 +34,72 @@ class FlashcardViewController: UIViewController {
         
         backgroundView.backgroundColor = blue
         
-        // The onCustomPan: method will be defined in Step 3 below.
-        var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
-       
-//        cardStart = CGPoint(x: cardView.center.x, y: cardView.center.y + cardDownOffset)
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
         
-        // Attach it to a view of your choice. If it's a UIImageView, remember to enable user interaction
         cardView.userInteractionEnabled = true
         cardView.addGestureRecognizer(panGestureRecognizer)
+        
+        cardInitialCenter = cardView.center
+        
+        showingSide = front
+        hiddenSide = back
+        
     }
     
     func tapped() {
-        var showingSide = front
-        var hiddenSide = back
-        var showingBack = true
         
-        if showingBack {
-            (showingSide, hiddenSide) = (back, front)
-        }
+        (showingSide, hiddenSide) = (hiddenSide, showingSide)
         
         UIView.transitionFromView(showingSide, toView: hiddenSide, duration: 0.6, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
         
-        showingBack = !showingBack
-        
+        print(showingSide.backgroundColor)
+
     }
     
     func onCustomPan(sender: UIPanGestureRecognizer) {
         let point = sender.locationInView(view)
-        let velocity = sender.velocityInView(view)
         let translation = sender.translationInView(view)
-        
-        var cardInitialCenter: CGPoint!
-        
-        cardInitialCenter = cardView.center
+        let newtranslation = CGAffineTransformMakeTranslation(translation.x, 0)
         
         if sender.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
         } else if sender.state == UIGestureRecognizerState.Changed {
-            cardView.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
-            self.cardView.transform = CGAffineTransformMakeRotation(CGFloat(translation.x * 15 / 160 * CGFloat(M_PI) / 180))
-
-            print("Gesture changed at: \(point)")
-            print("center.x: \(cardInitialCenter.x + translation.x)")
             
-            if point.x > 150 {
+            let rotate = CGAffineTransformMakeRotation(CGFloat(translation.x * 15 / 160 * CGFloat(M_PI) / 180))
+
+            self.cardView.transform = CGAffineTransformConcat(rotate, newtranslation);
+            
+            if point.x > 220 {
                 UIView.animateWithDuration(0.4, animations: {
                     self.backgroundView.backgroundColor = self.green
                 })
-            } else if point.x < 100 {
+            } else if point.x >= 115 && point.x <= 220 {
+                UIView.animateWithDuration(0.4, animations: { 
+                    self.backgroundView.backgroundColor = self.blue
+                })
+            } else if point.x < 115 {
                 UIView.animateWithDuration(0.4, animations: {
                     self.backgroundView.backgroundColor = self.red
                 })
             }
 
         } else if sender.state == UIGestureRecognizerState.Ended {
-            if translation.x > -40 && translation.x < 50 {
-                UIView.animateWithDuration(0.4, animations: { () -> Void in
-                    self.cardView.center.x = 160
+            self.backgroundView.backgroundColor = self.blue
+
+            if point.x > 220 {
+                UIView.animateWithDuration(0.4, animations: {
+                    UIView.animateWithDuration(0.4, animations: { () -> Void in
+                        self.cardView.center.x = 1000
+                    })
+                })
+            } else if point.x >= 115 && point.x <= 220 {
+                UIView.animateWithDuration(0.2, animations: {
                     self.cardView.transform = CGAffineTransformIdentity
                 })
-            } else if translation.x > 51 {
-                UIView.animateWithDuration(0.4, animations: { () -> Void in
-                    self.cardView.center.x = 1000
-                })
-            } else {
-                UIView.animateWithDuration(0.4, animations: { () -> Void in
+            } else if point.x < 115 {
+                UIView.animateWithDuration(0.4, animations: { 
                     self.cardView.center.x = -1000
-                })
-            }
-            print("Gesture ended at: \(point)")
+                }
+            )}
         }
     }
     
@@ -117,7 +117,7 @@ class FlashcardViewController: UIViewController {
         singleTap.numberOfTapsRequired = 1
         
         front = UIView(frame: rect)
-        front.backgroundColor = white
+        front.backgroundColor = green
         front.layer.cornerRadius = 16
         front.layer.shadowColor = black.CGColor
         front.layer.shadowOpacity = 0.2
@@ -125,7 +125,7 @@ class FlashcardViewController: UIViewController {
         front.layer.shadowRadius = 16
         
         back = UIView(frame: rect)
-        back.backgroundColor = white
+        back.backgroundColor = red
         back.layer.cornerRadius = 16
         back.layer.shadowColor = black.CGColor
         back.layer.shadowOpacity = 0.2
@@ -135,7 +135,8 @@ class FlashcardViewController: UIViewController {
         cardView = UIView(frame: rect)
         cardView.addGestureRecognizer(singleTap)
         cardView.userInteractionEnabled = true
-        cardView.addSubview(back)
+//        cardView.addSubview(back)
+        cardView.addSubview(front)
         self.view.addSubview(cardView)
         
         // card content
@@ -147,7 +148,7 @@ class FlashcardViewController: UIViewController {
         let bodyLabel = UILabel(frame: CGRectMake(textX, textY, textWidth, textHeight))
         let bodyFontOne = UIFont(name:"Avenir", size: 28.0)
         
-        bodyLabel.text = "sample text here this is a whole sentence"
+        bodyLabel.text = "Lorem Khaled Ipsum is a major key to success. Eliptical talk."
         bodyLabel.textColor = black
         bodyLabel.font = bodyFontOne
         bodyLabel.textAlignment = NSTextAlignment.Center
@@ -155,9 +156,9 @@ class FlashcardViewController: UIViewController {
         bodyLabel.numberOfLines = 0
         bodyLabel.contentMode = UIViewContentMode.ScaleAspectFit
         bodyLabel.sizeToFit()
-        cardView.addSubview(bodyLabel)
+        front.addSubview(bodyLabel)
         
-        let bodyHeight = bodyLabel.bounds.height
+//        let bodyHeight = bodyLabel.bounds.height
         
     }
     
