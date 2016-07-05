@@ -6,7 +6,6 @@
 //  Copyright © 2016 Michelle Venetucci Harvey. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SwiftHEXColors
 
@@ -34,7 +33,7 @@ class FlashcardViewController: UIViewController {
         
         backgroundView.backgroundColor = blue
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(FlashcardViewController.onCustomPan(_:)))
         
         cardView.userInteractionEnabled = true
         cardView.addGestureRecognizer(panGestureRecognizer)
@@ -113,7 +112,7 @@ class FlashcardViewController: UIViewController {
         let y = self.view.frame.minY
         let rect = CGRectMake(0, y, width, height)
         
-        let singleTap = UITapGestureRecognizer(target: self, action: "tapped")
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(FlashcardViewController.tapped))
         singleTap.numberOfTapsRequired = 1
         
         front = UIView(frame: rect)

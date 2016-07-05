@@ -14,7 +14,13 @@
 		3B070A3D1CC2EB7A003F9E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B070A3B1CC2EB7A003F9E9B /* LaunchScreen.storyboard */; };
 		3B070A481CC2EB7A003F9E9B /* flipflopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B070A471CC2EB7A003F9E9B /* flipflopTests.swift */; };
 		3B070A551CC2EBCA003F9E9B /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B070A541CC2EBCA003F9E9B /* FlashcardViewController.swift */; };
-		EB65B9B57E88F0F3521D8A59 /* Pods_flipflop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */; };
+		B9D9A9151D2C8F6700388694 /* DeksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9A9141D2C8F6700388694 /* DeksTableViewController.swift */; };
+		B9D9A9181D2C92E000388694 /* Dek.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9A9171D2C92E000388694 /* Dek.swift */; };
+		B9D9A91A1D2C937800388694 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9A9191D2C937800388694 /* Question.swift */; };
+		B9D9A91C1D2C941000388694 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9A91B1D2C941000388694 /* Answer.swift */; };
+		B9D9A91F1D2C9A6E00388694 /* DekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9A91E1D2C9A6E00388694 /* DekTableViewCell.swift */; };
+		E20FAEFC5E5B7C0986AD719C /* Pods_flipflopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4E1078DD850B9FB583B05D /* Pods_flipflopTests.framework */; };
+		EE09CAAAEBCAE9CD9B00BCA0 /* Pods_flipflop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67E3E5BFB42B72BDDC369FF /* Pods_flipflop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +45,17 @@
 		3B070A471CC2EB7A003F9E9B /* flipflopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flipflopTests.swift; sourceTree = "<group>"; };
 		3B070A491CC2EB7A003F9E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B070A541CC2EBCA003F9E9B /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlashcardViewController.swift; path = ../FlashcardViewController.swift; sourceTree = "<group>"; };
-		5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.release.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.release.xcconfig"; sourceTree = "<group>"; };
-		DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.debug.xcconfig"; sourceTree = "<group>"; };
-		EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flipflop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D5841B4CED5F718B3DA94D /* Pods-flipflop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.debug.xcconfig"; sourceTree = "<group>"; };
+		4B093E8906BBB38606A8B18D /* Pods-flipflopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flipflopTests/Pods-flipflopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F4E1078DD850B9FB583B05D /* Pods_flipflopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flipflopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BB07A7A34903C7BDF2198C /* Pods-flipflopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flipflopTests/Pods-flipflopTests.release.xcconfig"; sourceTree = "<group>"; };
+		A67E3E5BFB42B72BDDC369FF /* Pods_flipflop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flipflop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D9A9141D2C8F6700388694 /* DeksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeksTableViewController.swift; path = ViewControllers/DeksTableViewController.swift; sourceTree = "<group>"; };
+		B9D9A9171D2C92E000388694 /* Dek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dek.swift; path = Models/Dek.swift; sourceTree = "<group>"; };
+		B9D9A9191D2C937800388694 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = Models/Question.swift; sourceTree = "<group>"; };
+		B9D9A91B1D2C941000388694 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Answer.swift; path = Models/Answer.swift; sourceTree = "<group>"; };
+		B9D9A91E1D2C9A6E00388694 /* DekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DekTableViewCell.swift; path = TableViewCells/DekTableViewCell.swift; sourceTree = "<group>"; };
+		FDF056E4297D349EB306DF26 /* Pods-flipflop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flipflop.release.xcconfig"; path = "Pods/Target Support Files/Pods-flipflop/Pods-flipflop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB65B9B57E88F0F3521D8A59 /* Pods_flipflop.framework in Frameworks */,
+				EE09CAAAEBCAE9CD9B00BCA0 /* Pods_flipflop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,17 +71,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20FAEFC5E5B7C0986AD719C /* Pods_flipflopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		015D64E3910797F9F7C42899 /* Pods */ = {
+		077CB25CE0F0E03004B1D29C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */,
-				5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */,
+				47D5841B4CED5F718B3DA94D /* Pods-flipflop.debug.xcconfig */,
+				FDF056E4297D349EB306DF26 /* Pods-flipflop.release.xcconfig */,
+				4B093E8906BBB38606A8B18D /* Pods-flipflopTests.debug.xcconfig */,
+				A2BB07A7A34903C7BDF2198C /* Pods-flipflopTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -78,8 +95,8 @@
 				3B070A311CC2EB7A003F9E9B /* flipflop */,
 				3B070A461CC2EB7A003F9E9B /* flipflopTests */,
 				3B070A301CC2EB7A003F9E9B /* Products */,
-				015D64E3910797F9F7C42899 /* Pods */,
-				6943A8F177328EC9049C479E /* Frameworks */,
+				077CB25CE0F0E03004B1D29C /* Pods */,
+				A4370F632C5DAF7F15B7D8BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +112,10 @@
 		3B070A311CC2EB7A003F9E9B /* flipflop */ = {
 			isa = PBXGroup;
 			children = (
+				B9D9A91D1D2C9A4900388694 /* Table View Cells */,
+				B9D9A9161D2C92A000388694 /* Models */,
+				B964CE3C1D2C20E2009CF3DD /* View Controllers */,
 				3B070A321CC2EB7A003F9E9B /* AppDelegate.swift */,
-				3B070A341CC2EB7A003F9E9B /* ViewController.swift */,
 				3B070A541CC2EBCA003F9E9B /* FlashcardViewController.swift */,
 				3B070A361CC2EB7A003F9E9B /* Main.storyboard */,
 				3B070A391CC2EB7A003F9E9B /* Assets.xcassets */,
@@ -115,12 +134,40 @@
 			path = flipflopTests;
 			sourceTree = "<group>";
 		};
-		6943A8F177328EC9049C479E /* Frameworks */ = {
+		A4370F632C5DAF7F15B7D8BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA3F522CFA3377D932C6057F /* Pods_flipflop.framework */,
+				A67E3E5BFB42B72BDDC369FF /* Pods_flipflop.framework */,
+				4F4E1078DD850B9FB583B05D /* Pods_flipflopTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B964CE3C1D2C20E2009CF3DD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B070A341CC2EB7A003F9E9B /* ViewController.swift */,
+				B9D9A9141D2C8F6700388694 /* DeksTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B9D9A9161D2C92A000388694 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9D9A9171D2C92E000388694 /* Dek.swift */,
+				B9D9A9191D2C937800388694 /* Question.swift */,
+				B9D9A91B1D2C941000388694 /* Answer.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B9D9A91D1D2C9A4900388694 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B9D9A91E1D2C9A6E00388694 /* DekTableViewCell.swift */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,12 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B070A4C1CC2EB7A003F9E9B /* Build configuration list for PBXNativeTarget "flipflop" */;
 			buildPhases = (
-				808E512F101DF5F429000C0F /* Check Pods Manifest.lock */,
+				3C03E512B77B89AC0D42D047 /* [CP] Check Pods Manifest.lock */,
 				3B070A2B1CC2EB7A003F9E9B /* Sources */,
 				3B070A2C1CC2EB7A003F9E9B /* Frameworks */,
 				3B070A2D1CC2EB7A003F9E9B /* Resources */,
-				8ED02240AACD7A9FB4EAADE9 /* Embed Pods Frameworks */,
-				3F280CB1F2E03B2069FD794D /* Copy Pods Resources */,
+				E9F2D0AFCA04F6DDE4F51B10 /* [CP] Embed Pods Frameworks */,
+				EC21DB6816E3071A10410E99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B070A4F1CC2EB7A003F9E9B /* Build configuration list for PBXNativeTarget "flipflopTests" */;
 			buildPhases = (
+				4AE1C4311280F95999608AEB /* [CP] Check Pods Manifest.lock */,
 				3B070A3F1CC2EB7A003F9E9B /* Sources */,
 				3B070A401CC2EB7A003F9E9B /* Frameworks */,
 				3B070A411CC2EB7A003F9E9B /* Resources */,
+				53E5AE2C40B909214B7BD2E6 /* [CP] Embed Pods Frameworks */,
+				B6B8877AA6A3920456686E3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,29 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F280CB1F2E03B2069FD794D /* Copy Pods Resources */ = {
+		3C03E512B77B89AC0D42D047 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflop/Pods-flipflop-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		808E512F101DF5F429000C0F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,19 +290,79 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8ED02240AACD7A9FB4EAADE9 /* Embed Pods Frameworks */ = {
+		4AE1C4311280F95999608AEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53E5AE2C40B909214B7BD2E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflopTests/Pods-flipflopTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6B8877AA6A3920456686E3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflopTests/Pods-flipflopTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9F2D0AFCA04F6DDE4F51B10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflop/Pods-flipflop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC21DB6816E3071A10410E99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flipflop/Pods-flipflop-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -277,8 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D9A91F1D2C9A6E00388694 /* DekTableViewCell.swift in Sources */,
 				3B070A351CC2EB7A003F9E9B /* ViewController.swift in Sources */,
 				3B070A331CC2EB7A003F9E9B /* AppDelegate.swift in Sources */,
+				B9D9A9151D2C8F6700388694 /* DeksTableViewController.swift in Sources */,
+				B9D9A91C1D2C941000388694 /* Answer.swift in Sources */,
+				B9D9A91A1D2C937800388694 /* Question.swift in Sources */,
+				B9D9A9181D2C92E000388694 /* Dek.swift in Sources */,
 				3B070A551CC2EBCA003F9E9B /* FlashcardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +508,7 @@
 		};
 		3B070A4D1CC2EB7A003F9E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC0AAE07528F9359EB3E5FEA /* Pods-flipflop.debug.xcconfig */;
+			baseConfigurationReference = 47D5841B4CED5F718B3DA94D /* Pods-flipflop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = flipflop/Info.plist;
@@ -420,7 +520,7 @@
 		};
 		3B070A4E1CC2EB7A003F9E9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BF1428CDF59F9232746A0E2 /* Pods-flipflop.release.xcconfig */;
+			baseConfigurationReference = FDF056E4297D349EB306DF26 /* Pods-flipflop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = flipflop/Info.plist;
@@ -432,6 +532,7 @@
 		};
 		3B070A501CC2EB7A003F9E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B093E8906BBB38606A8B18D /* Pods-flipflopTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = flipflopTests/Info.plist;
@@ -444,6 +545,7 @@
 		};
 		3B070A511CC2EB7A003F9E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BB07A7A34903C7BDF2198C /* Pods-flipflopTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = flipflopTests/Info.plist;
